@@ -1,0 +1,92 @@
+{
+  "language_rule": "Questions are written in English. Detect the user's language from their first message and translate all questions, hints, and titles when presenting to the user.",
+  "phases": [
+    {
+      "id": "basics",
+      "title": "Basic information",
+      "questions": [
+        {
+          "id": "project_name",
+          "question": "Project name?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "project_type",
+          "question": "Project type?",
+          "type": "select",
+          "options": ["unity-game", "threejs-game", "saas-web", "api-service", "custom"],
+          "required": true
+        },
+        {
+          "id": "description",
+          "question": "Brief project description?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "repo_status",
+          "question": "Create new repo or use existing?",
+          "type": "select",
+          "options": ["new", "existing"],
+          "required": true
+        },
+        {
+          "id": "repo_url",
+          "question": "Repo URL (if existing)?",
+          "type": "text",
+          "condition": "repo_status == existing"
+        },
+        {
+          "id": "repo_visibility",
+          "question": "Repo visibility?",
+          "type": "select",
+          "options": ["public", "private"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "title": "Team configuration",
+      "questions": [
+        {
+          "id": "team_mode",
+          "question": "Solo or Agent Teams?",
+          "type": "select",
+          "options": ["solo", "agent-teams"]
+        },
+        {
+          "id": "need_pm",
+          "question": "Need project management (CCPM)?",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "id": "need_memory",
+          "question": "Need persistent memory (MemPalace)?",
+          "type": "boolean",
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "stack",
+      "title": "Tech stack and skills",
+      "questions": [
+        {
+          "id": "tech_stack",
+          "question": "Primary tech stack?",
+          "type": "text",
+          "hint": "e.g. Unity 2022 + C#, or Next.js + TypeScript + Supabase"
+        },
+        {
+          "id": "additional_skills",
+          "question": "Any additional skills needed?",
+          "type": "text",
+          "hint": "e.g. security-auditor, code-reviewer, playwright-testing"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "custom",
+  "name": "Custom Project",
+  "description": "Minimal preset — interview collects additional details",
+  "default_tech_stack": "",
+  "directories": [
+    "src",
+    "docs",
+    "plans",
+    "plans/reports"
+  ],
+  "gitignore_template": "Node",
+  "modules": [
+    "repo-setup",
+    "claude-settings",
+    "rules-generator",
+    "skills-installer",
+    "agents-generator",
+    "memory-setup",
+    "pm-setup"
+  ]
+}

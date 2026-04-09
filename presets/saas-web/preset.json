@@ -1,0 +1,31 @@
+{
+  "type": "saas-web",
+  "name": "SaaS Web App",
+  "description": "Full-stack SaaS web application",
+  "default_tech_stack": "Next.js, TypeScript, PostgreSQL",
+  "directories": [
+    "src/app",
+    "src/components",
+    "src/lib",
+    "src/services",
+    "src/types",
+    "prisma",
+    "public",
+    "docs",
+    "plans",
+    "plans/reports"
+  ],
+  "gitignore_template": "Node",
+  "modules": [
+    "repo-setup",
+    "claude-settings",
+    "rules-generator",
+    "code-standards",
+    "skills-installer",
+    "agents-generator",
+    "memory-setup",
+    "pm-setup",
+    "templates-scaffold",
+    "workspace-setup"
+  ]
+}

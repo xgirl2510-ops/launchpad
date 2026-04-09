@@ -1,0 +1,60 @@
+{
+  "tools": {
+    "gh": {
+      "install": {
+        "macos": "brew install gh",
+        "linux": "sudo apt install gh || sudo dnf install gh",
+        "windows": "winget install GitHub.cli"
+      },
+      "description": "GitHub CLI for repo creation and management",
+      "required": true,
+      "check": "gh --version"
+    },
+    "node": {
+      "install": {
+        "macos": "brew install node",
+        "linux": "curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs",
+        "windows": "winget install OpenJS.NodeJS.LTS"
+      },
+      "description": "Node.js runtime",
+      "required": false,
+      "check": "node --version"
+    },
+    "python3": {
+      "install": {
+        "macos": "brew install python3",
+        "linux": "sudo apt install python3",
+        "windows": "winget install Python.Python.3"
+      },
+      "description": "Python runtime",
+      "required": false,
+      "check": "python3 --version"
+    },
+    "tmux": {
+      "install": {
+        "macos": "brew install tmux",
+        "linux": "sudo apt install tmux",
+        "windows": null
+      },
+      "description": "Terminal multiplexer for workspace management",
+      "required": false,
+      "check": "tmux -V"
+    },
+    "mempalace": {
+      "install": {
+        "all": "git clone https://github.com/pchaganti/gx-mempalace.git ~/.mempalace && cd ~/.mempalace && chmod +x install.sh && ./install.sh"
+      },
+      "description": "Persistent memory system with knowledge graph for Claude Code",
+      "required": false,
+      "check": "test -d ~/.mempalace"
+    },
+    "ccpm": {
+      "install": {
+        "all": "git clone https://github.com/pchaganti/gx-ccpm.git ~/.ccpm && cd ~/.ccpm && chmod +x install.sh && ./install.sh"
+      },
+      "description": "Claude Code Project Manager for sprint planning and task tracking",
+      "required": false,
+      "check": "test -d ~/.ccpm"
+    }
+  }
+}

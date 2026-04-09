@@ -1,0 +1,28 @@
+{
+  "agents": [
+    {
+      "name": "gameplay-programmer",
+      "description": "Implements game mechanics, player systems, combat, and interactive features"
+    },
+    {
+      "name": "ui-programmer",
+      "description": "Implements UI systems: menus, HUDs, inventory screens, dialogue"
+    },
+    {
+      "name": "ai-programmer",
+      "description": "Implements game AI: behavior trees, pathfinding, NPC behavior"
+    },
+    {
+      "name": "technical-artist",
+      "description": "Shaders, VFX, rendering optimization, art pipeline"
+    },
+    {
+      "name": "tester",
+      "description": "Runs tests, validates functionality, reports bugs"
+    },
+    {
+      "name": "code-reviewer",
+      "description": "Reviews code quality, architecture, and standards compliance"
+    }
+  ]
+}

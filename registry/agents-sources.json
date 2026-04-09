@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "claudekit-marketing": {
+      "type": "github-clone",
+      "url": "https://github.com/claudekit/claudekit-marketing",
+      "path": ".claude/agents"
+    },
+    "claudekit-engineer": {
+      "type": "github-clone",
+      "url": "https://github.com/claudekit/claudekit-engineer",
+      "path": ".claude/agents"
+    }
+  },
+  "agents": {
+    "code-reviewer": {
+      "source": "built-in",
+      "note": "Available by default in Claude Code via Agent tool"
+    },
+    "performance-tester": {
+      "source": "built-in",
+      "note": "Custom agent generated per project from preset agents config"
+    },
+    "art-reviewer": {
+      "source": "built-in",
+      "note": "Custom agent generated per project from preset agents config"
+    }
+  }
+}

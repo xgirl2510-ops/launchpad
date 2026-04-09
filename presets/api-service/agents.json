@@ -1,0 +1,24 @@
+{
+  "agents": [
+    {
+      "name": "fullstack-developer",
+      "description": "Implements API endpoints, services, middleware"
+    },
+    {
+      "name": "database-admin",
+      "description": "Schema design, migrations, query optimization"
+    },
+    {
+      "name": "tester",
+      "description": "Unit tests, integration tests, load tests"
+    },
+    {
+      "name": "code-reviewer",
+      "description": "Reviews code quality and standards compliance"
+    },
+    {
+      "name": "security-engineer",
+      "description": "API security, auth, rate limiting, input validation"
+    }
+  ]
+}

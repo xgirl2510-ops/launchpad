@@ -1,0 +1,16 @@
+{
+  "name": "launchpad",
+  "version": "0.1.0",
+  "description": "AI-first project bootstrapper for Claude Code",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xgirl2510-ops/launchpad"
+  },
+  "keywords": [
+    "claude-code",
+    "bootstrapper",
+    "project-setup",
+    "ai-first"
+  ]
+}

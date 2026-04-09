@@ -1,0 +1,30 @@
+{
+  "type": "api-service",
+  "name": "API Service",
+  "description": "Backend API service / microservice",
+  "default_tech_stack": "TypeScript, Node.js",
+  "directories": [
+    "src/routes",
+    "src/services",
+    "src/models",
+    "src/middleware",
+    "src/utils",
+    "tests",
+    "docs",
+    "plans",
+    "plans/reports"
+  ],
+  "gitignore_template": "Node",
+  "modules": [
+    "repo-setup",
+    "claude-settings",
+    "rules-generator",
+    "code-standards",
+    "skills-installer",
+    "agents-generator",
+    "memory-setup",
+    "pm-setup",
+    "templates-scaffold",
+    "workspace-setup"
+  ]
+}

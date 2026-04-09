@@ -1,0 +1,31 @@
+{
+  "type": "threejs-game",
+  "name": "Three.js Game",
+  "description": "Browser-based 3D game with Three.js",
+  "default_tech_stack": "Three.js, TypeScript, Vite",
+  "directories": [
+    "src",
+    "src/scenes",
+    "src/objects",
+    "src/systems",
+    "src/utils",
+    "public",
+    "public/assets",
+    "docs",
+    "plans",
+    "plans/reports"
+  ],
+  "gitignore_template": "Node",
+  "modules": [
+    "repo-setup",
+    "claude-settings",
+    "rules-generator",
+    "code-standards",
+    "skills-installer",
+    "agents-generator",
+    "memory-setup",
+    "pm-setup",
+    "templates-scaffold",
+    "workspace-setup"
+  ]
+}

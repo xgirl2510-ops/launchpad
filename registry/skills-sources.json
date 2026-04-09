@@ -1,0 +1,40 @@
+{
+  "sources": {
+    "alirezarezvani/claude-skills": {
+      "type": "github-plugin",
+      "install": "/plugin marketplace add alirezarezvani/claude-skills"
+    },
+    "wshobson/agents": {
+      "type": "github-plugin",
+      "install": "/plugin marketplace add wshobson/agents"
+    },
+    "VoltAgent/awesome-agent-skills": {
+      "type": "github-clone",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills"
+    },
+    "claudekit-marketing": {
+      "type": "github-clone",
+      "url": "https://github.com/claudekit/claudekit-marketing",
+      "path": ".claude/skills"
+    },
+    "claudekit-engineer": {
+      "type": "github-clone",
+      "url": "https://github.com/claudekit/claudekit-engineer",
+      "path": ".claude/skills"
+    }
+  },
+  "skills": {
+    "code-reviewer": {
+      "source": "alirezarezvani/claude-skills",
+      "package": "engineering-skills"
+    },
+    "security-auditor": {
+      "source": "alirezarezvani/claude-skills",
+      "package": "engineering-skills"
+    },
+    "frontend-design": {
+      "source": "built-in",
+      "note": "Available by default in Claude Code"
+    }
+  }
+}

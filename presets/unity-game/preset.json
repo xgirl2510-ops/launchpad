@@ -1,0 +1,72 @@
+{
+  "type": "unity-game",
+  "name": "Unity Game",
+  "description": "Setup for Unity game project with C#",
+  "default_tech_stack": "Unity, C#",
+  "directories": [
+    "Assets/Scripts",
+    "Assets/Prefabs",
+    "Assets/Materials",
+    "Assets/Scenes",
+    "Assets/UI",
+    "docs",
+    "plans",
+    "plans/reports"
+  ],
+  "gitignore_template": "Unity",
+  "modules": {
+    "repo-setup": {
+      "enabled": true
+    },
+    "claude-settings": {
+      "enabled": true,
+      "config": {
+        "agent_teams": true,
+        "hooks": ["Stop", "PreCompact", "TaskCompleted"]
+      }
+    },
+    "rules-generator": {
+      "enabled": true,
+      "template": "rules/claude-rules.md"
+    },
+    "code-standards": {
+      "enabled": true,
+      "files": [
+        "standards/unity-code-standards.md",
+        "standards/unity-code-checklist.md"
+      ]
+    },
+    "skills-installer": {
+      "enabled": true,
+      "skills": [
+        { "name": "code-reviewer", "source": "alirezarezvani/claude-skills" },
+        { "name": "security-auditor", "source": "alirezarezvani/claude-skills" }
+      ]
+    },
+    "agents-generator": {
+      "enabled": true,
+      "agents": [
+        { "name": "code-reviewer", "description": "Review code with Unity conventions" },
+        { "name": "performance-tester", "description": "Check performance bottlenecks" },
+        { "name": "art-reviewer", "description": "Review art assets and prefabs" }
+      ]
+    },
+    "memory-setup": {
+      "enabled": true,
+      "system": "mempalace",
+      "wings": ["game-design", "art", "levels", "technical", "bugs"]
+    },
+    "pm-setup": {
+      "enabled": true,
+      "system": "ccpm"
+    },
+    "templates-scaffold": {
+      "enabled": true,
+      "structure": "unity-standard"
+    },
+    "workspace-setup": {
+      "enabled": true,
+      "tmux": true
+    }
+  }
+}

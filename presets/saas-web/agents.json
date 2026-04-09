@@ -1,0 +1,28 @@
+{
+  "agents": [
+    {
+      "name": "fullstack-developer",
+      "description": "Implements frontend and backend features"
+    },
+    {
+      "name": "database-admin",
+      "description": "Schema design, migrations, query optimization"
+    },
+    {
+      "name": "ui-ux-designer",
+      "description": "UI design, wireframes, responsive layouts"
+    },
+    {
+      "name": "tester",
+      "description": "Unit tests, integration tests, E2E tests"
+    },
+    {
+      "name": "code-reviewer",
+      "description": "Reviews code quality and standards compliance"
+    },
+    {
+      "name": "security-engineer",
+      "description": "Security audits, auth review, vulnerability scanning"
+    }
+  ]
+}

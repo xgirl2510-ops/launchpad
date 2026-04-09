@@ -1,0 +1,20 @@
+{
+  "agents": [
+    {
+      "name": "gameplay-programmer",
+      "description": "Implements game mechanics, player controls, physics"
+    },
+    {
+      "name": "technical-artist",
+      "description": "Shaders, VFX, rendering pipeline, asset optimization"
+    },
+    {
+      "name": "tester",
+      "description": "Runs tests, browser QA, performance profiling"
+    },
+    {
+      "name": "code-reviewer",
+      "description": "Reviews code quality and standards compliance"
+    }
+  ]
+}

@@ -19,10 +19,37 @@
           "required": true
         },
         {
+          "id": "project_stage",
+          "question": "Project stage?",
+          "type": "select",
+          "options": ["new", "maintenance"],
+          "option_descriptions": {
+            "new": "Starting from scratch",
+            "maintenance": "Existing project, adding features or fixing"
+          },
+          "required": true
+        },
+        {
+          "id": "project_scale",
+          "question": "Project scale?",
+          "type": "select",
+          "options": ["playground", "poc", "pilot", "mvp", "production"],
+          "option_descriptions": {
+            "playground": "Sandbox, learning, experimentation",
+            "poc": "Proof of concept, validate an idea",
+            "pilot": "Limited release, testing with real users",
+            "mvp": "Minimum viable product, core features only",
+            "production": "Full production, complete feature set"
+          },
+          "required": true,
+          "condition": "project_stage == new"
+        },
+        {
           "id": "description",
           "question": "Brief project description?",
           "type": "text",
-          "required": true
+          "required": true,
+          "hint": "What does this project do? 1-2 sentences."
         },
         {
           "id": "repo_status",
@@ -47,44 +74,76 @@
       ]
     },
     {
-      "id": "team",
-      "title": "Team configuration",
+      "id": "tech_stack",
+      "title": "Tech stack details",
       "questions": [
         {
-          "id": "team_mode",
-          "question": "Solo or Agent Teams?",
-          "type": "select",
-          "options": ["solo", "agent-teams"]
+          "id": "primary_language",
+          "question": "Primary programming language?",
+          "type": "text",
+          "required": true,
+          "hint": "e.g. C#, TypeScript, Python, Rust, Go"
         },
         {
-          "id": "need_pm",
-          "question": "Need project management (CCPM)?",
-          "type": "boolean",
-          "default": true
+          "id": "framework",
+          "question": "Main framework or engine?",
+          "type": "text",
+          "required": true,
+          "hint": "e.g. Unity 2022, Next.js 15, FastAPI, Express"
         },
         {
-          "id": "need_memory",
-          "question": "Need persistent memory (MemPalace)?",
-          "type": "boolean",
-          "default": true
+          "id": "database",
+          "question": "Database (if any)?",
+          "type": "text",
+          "hint": "e.g. PostgreSQL, MongoDB, Supabase, Firebase"
+        },
+        {
+          "id": "additional_tools",
+          "question": "Other key libraries or tools?",
+          "type": "text",
+          "hint": "e.g. Prisma, TailwindCSS, Redis, Docker"
+        },
+        {
+          "id": "code_style",
+          "question": "Preferred code style or conventions?",
+          "type": "text",
+          "hint": "e.g. Airbnb style, Google style, Microsoft C# conventions, or 'auto' to generate from best practices"
         }
       ]
     },
     {
-      "id": "stack",
-      "title": "Tech stack and skills",
+      "id": "team",
+      "title": "Team configuration",
+      "questions": [
+{
+          "id": "features",
+          "question": "Which features to enable?",
+          "type": "multi-select",
+          "options": [
+            {"value": "ccpm", "label": "CCPM", "description": "Quản lý ticket qua GitHub"},
+            {"value": "mempalace", "label": "MemPalace", "description": "Tăng cường bộ nhớ cho AI"}
+          ],
+          "default": ["ccpm", "mempalace"]
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "title": "Customization",
       "questions": [
         {
-          "id": "tech_stack",
-          "question": "Primary tech stack?",
-          "type": "text",
-          "hint": "e.g. Unity 2022 + C#, or Next.js + TypeScript + Supabase"
+          "id": "additional_skills",
+          "question": "Any additional skills to install?",
+          "type": "review-and-add",
+          "source": "preset:skills.json",
+          "hint": "Review preset skills, then add extras if needed"
         },
         {
-          "id": "additional_skills",
-          "question": "Any additional skills needed?",
-          "type": "text",
-          "hint": "e.g. security-auditor, code-reviewer, playwright-testing"
+          "id": "additional_agents",
+          "question": "Any additional agents to create?",
+          "type": "review-and-add",
+          "source": "preset:agents.json",
+          "hint": "Review preset agents, then add extras if needed"
         }
       ]
     }

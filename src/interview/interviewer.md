@@ -36,7 +36,12 @@ For each question:
    - Default value if `type: boolean` (e.g. "default: yes")
    - Hint text if `hint` exists
 3. **Accept answer** - store the answer keyed by question `id`
-4. **Validate** - if `required: true` and answer is empty, ask again
+4. **Handle `review-and-add` type** - when the question type is `review-and-add`:
+   a. Read the source file (e.g. `presets/{project_type}/skills.json` or `agents.json`)
+   b. Display the preset list to the user (numbered, with descriptions if available)
+   c. Ask: "Want to add more? (type names, or skip)"
+   d. Store result as: `{"preset": [...from file], "added": [...user additions]}`
+5. **Validate** - if `required: true` and answer is empty, ask again
 
 ### Step 4: Allow edits
 
@@ -65,17 +70,24 @@ Create `project-context.json` at the target project directory with this structur
   "description": "...",
   "repo_status": "new",
   "repo_visibility": "public",
-  "team_mode": "solo",
-  "need_pm": true,
-  "need_memory": true,
-  "tech_stack": "...",
-  "additional_skills": "...",
+  "primary_language": "...",
+  "framework": "...",
+  "database": "...",
+  "additional_tools": "...",
+  "code_style": "...",
+  "team_mode": "agent-teams",
+  "need_pm": true,      // derived: "ccpm" in features[]
+  "need_memory": true,  // derived: "mempalace" in features[]
+  "skills": {"preset": ["...from preset"], "added": ["...user extras"]},
+  "agents": {"preset": [{"name": "...", "description": "..."}], "added": ["...user extras"]},
   "created_at": "2026-04-09T14:55:00+07:00",
   "launchpad_version": "0.1.0"
 }
 ```
 
 Only include fields that were answered (skip fields the user skipped).
+
+The `tech_stack` phase answers (`primary_language`, `framework`, `database`, `additional_tools`, `code_style`) are critical - the code-standards module uses them to auto-generate language-specific standards, checklist, and clean code principles.
 
 ### Step 6: Final confirmation
 

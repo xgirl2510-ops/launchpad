@@ -16,6 +16,13 @@
           "question": "Project type?",
           "type": "select",
           "options": ["unity-game", "threejs-game", "saas-web", "api-service", "custom"],
+          "option_descriptions": {
+            "unity-game": "2D/3D game built with Unity engine",
+            "threejs-game": "Browser-based 3D game or interactive experience",
+            "saas-web": "Web app with user accounts, dashboard, billing",
+            "api-service": "Backend API, microservice, or data pipeline",
+            "custom": "Other project type, you choose everything"
+          },
           "required": true
         },
         {
@@ -49,7 +56,7 @@
           "question": "Brief project description?",
           "type": "text",
           "required": true,
-          "hint": "What does this project do? 1-2 sentences."
+          "hint": "e.g. 'A 2D roguelike with turn-based combat' or 'SaaS dashboard for tracking fitness goals'"
         },
         {
           "id": "repo_status",
